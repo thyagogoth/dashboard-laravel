@@ -11,6 +11,9 @@ class MenuViewComposer
         $menus = auth()->user()
             ->role
             ->modules;
+            // ->resources()
+            // ->where('is_menu', true)
+            // ->get();
 
         return $view->with('menus', $menus);
     }

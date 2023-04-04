@@ -30,7 +30,7 @@
     </span>
 </div>
 
-<div class="scrollbar-sidebar">
+{{-- <div class="scrollbar-sidebar">
     <div class="app-sidebar__inner">
         <ul class="vertical-nav-menu">
 
@@ -38,14 +38,12 @@
                 Menu
             </li>
 
-
             <li class="">
                 <a href="#1" aria-expanded="false">
                     <i class="metismenu-icon pe-7s-rocket"></i> {{ "Modulo"}}
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
-                <ul class="mm-collapse" style="">
-
+                <ul  style="">
                     @foreach ($menus as $menu)
                     <li>
                         <a href="{{ route($menu->resource) }}">
@@ -59,4 +57,16 @@
 
         </ul>
     </div>
-</div>
+</div> --}}
+
+
+@foreach($menus as $m)
+{{ $m->name }}
+@foreach ($m->resources as $r )
+<li>
+    <a href="{{ route($r->resource) }}">
+        <i class="metismenu-icon"></i>{{ $r->name }}
+    </a>
+</li>
+@endforeach
+@endforeach

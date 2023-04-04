@@ -19,9 +19,6 @@ class MenuServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('admin.layout.app', function($view) {
-            $menus = auth()->user()->role->resources()->where('is_menu', true)->get();
-            $view->with('menus', $menus);
-        });
+        view()->composer('admin.layout.app', [MenuViewComposer::class, 'compose']);
     }
 }
