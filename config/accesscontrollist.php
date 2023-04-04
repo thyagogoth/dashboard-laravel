@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'ignore.resources' => []
+    // 'ignore.resources' => []
 ];

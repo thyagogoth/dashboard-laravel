@@ -61,12 +61,12 @@
 
 
 @foreach($menus as $m)
-{{ $m->name }}
-@foreach ($m->resources as $r )
-<li>
-    <a href="{{ route($r->resource) }}">
-        <i class="metismenu-icon"></i>{{ $r->name }}
-    </a>
-</li>
-@endforeach
+    {{ $m->name }}
+    @foreach ($m->resources as $r )
+        <li>
+            <a href="{{ route($r->resource) }}">
+                <i class="metismenu-icon"></i>{{ $r->name }}
+            </a>
+        </li>
+    @endforeach
 @endforeach

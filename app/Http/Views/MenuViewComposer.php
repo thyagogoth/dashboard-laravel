@@ -8,12 +8,13 @@ class MenuViewComposer
     public function compose($view)
     {
 
+        dd($view);
         $menus = auth()->user()
             ->role
-            ->modules;
-            // ->resources()
+            // ->modules;
+            ->resources()
             // ->where('is_menu', true)
-            // ->get();
+            ->get();
 
         return $view->with('menus', $menus);
     }

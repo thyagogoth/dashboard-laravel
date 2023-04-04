@@ -19,6 +19,6 @@ class MenuServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('admin.layout.app', [MenuViewComposer::class, 'compose']);
+        view()->composer('admin.layout.sidebar-menu', [MenuViewComposer::class, 'compose'] );
     }
 }

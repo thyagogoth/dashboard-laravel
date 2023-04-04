@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Views\MenuViewComposer;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 
