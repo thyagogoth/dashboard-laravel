@@ -57,7 +57,7 @@ class RoleController extends Controller
         // }
 
         $role = Role::find($id);
-        return view('admin.pages.acl.roles.edit', compact('roles'));
+        return view('admin.pages.acl.roles.edit', compact('role'));
     }
 
     public function update(RoleUpdateRequest $request, $id)
